@@ -184,6 +184,7 @@ background-color: #C4c4c4;
     font-weight: bold;
     font-size: 16px;
     line-height: 1.88;
+    letter-spacing: 0.06em;
     color: var(--main-light-color); 
     cursor: pointer; 
     transition-property: bacground;
@@ -398,7 +399,7 @@ color: var(--brand-color);
     margin-bottom: 9px;
 }
 .footer-left{
-    margin-right: 70px;
+margin-right: 70px;
 }
 .footer-social-title{
 margin-top: 12px;
@@ -414,7 +415,6 @@ color: var(--main-light-color);
 .footer-social-list{
     display: flex;
 }
-
 .footer-social-link{
     display: flex;
     justify-content: center;
@@ -437,6 +437,35 @@ color: var(--main-light-color);
 .footer-social-icon {
 fill: var(--main-light-color, #F5F4FA);
 }
+.footer-center{
+margin-right: 93px;
+}
+
+.input-subscription{
+width: 358px;
+height: 50px;
+border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+margin-right: 12px;
+padding-left: 16px;
+background: transparent;
+font-size: 16px;
+line-height: 1.25;
+letter-spacing: 0.03em;
+color: var(--main-light-color);
+}
+
+.btn-footer{
+display: inline-flex;
+align-items: center;
+padding-left: 28px;
+padding-right: 28px;
+}
+.icon-send{
+margin-left: 10px;
+}
+
 /*============ END FOOTER  ===================*/
 
 /*============   MODAL WINDOW  ===================*/
@@ -465,6 +494,7 @@ fill: var(--main-light-color, #F5F4FA);
     height: 581px;
     background-color: var(--main-light-color);
     border-radius: 4px;
+    padding: 40px;
 }
 .modal-close-btn{
     position: absolute;
@@ -480,7 +510,106 @@ fill: var(--main-light-color, #F5F4FA);
     height: 30px;
     border-radius: 50%;
     cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-close-btn:focus .modal-close-icon,
+.modal-close-btn:hover .modal-close-icon{
+    fill: var(--brand-color);
+}
+
+
+.title-modal{
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: var(--main-dark-color); 
+    display: inline-block; 
+    margin-bottom: 12px;
+}
+.contact-form{
+
+}
+.contact-form-label{
+display: block;
+margin-bottom: 4px;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.01em;
+color: var(--main-medium-color);
+}
+
+.contact-form-field{
+display: block;
+margin-bottom: 10px;
+}
+
+.contact-form-input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 0 0 0 42px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-input:hover, .contact-form-input:focus,
+.contact-form-comment:hover, .contact-form-comment:focus{
+    outline: none;
+    border-color: var(--brand-color);
+}
+.contact-form-input:hover + .contact-form-icon , 
+.contact-form-input:focus + .contact-form-icon {
+    fill: var(--brand-color);
+}
+
+.contact-form-icon-wrapper{
+ display: block;
+ position: relative;
+ margin-bottom: 4px;
+}
+.contact-form-icon{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-comment{
+    resize: none;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-comment::placeholder{
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+}
+
+.contact-form-checkbox-label{
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--main-medium-color);
+}
+
+.btn-modal{
+padding-left: 55px;
+padding-right: 55px;  
+}
+
 /*============  END MODAL WINDOW   ===================*/
 
 
@@ -528,15 +657,12 @@ cursor: pointer;
 transition-property: background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;
 transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;
 transition-property: box-shadow;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;
 }
 .portfolio-button:hover, .portfolio-button:focus{
 background-color: var(--brand-color-hover);
@@ -590,8 +716,6 @@ overflow: auto;
 transform: translateY(100%);
 transition-property: transform;
 transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-delay: 0;
 /*transition:  transform 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 .works-link:hover .overlay-portfolio,
