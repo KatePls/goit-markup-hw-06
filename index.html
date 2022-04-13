@@ -364,7 +364,7 @@
     </div>
     <div class="footer-right">
       <p class="footer-social-title">Подпишитесь на рассылку</p>
-      <form>
+      <form class="form-subscription">
         <input 
           class="input-subscription" 
           name="user_email" 
@@ -381,7 +381,8 @@
   </div>
 </footer> 
 
-<div class="backdrop is-hidden" data-modal>
+
+<div class="backdrop is-hidden"  data-modal>
   <div class="modal">
     <button type="button" class="modal-close-btn" data-modal-close>
       <svg class="modal-close-icon" width="18" height="18"> 
@@ -429,11 +430,11 @@
       <div class="contact-form-wrapper">
         <input 
         name="accept-policy" 
-        class="contact-form-checkbox" 
+        class="contact-form-checkbox visually-hidden" 
         type="checkbox" 
         id="policy-checkbox" required/>
         <label class="contact-form-checkbox-label" for="policy-checkbox">
-          Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+          Соглашаюсь с рассылкой и принимаю &nbsp; <a class="accept-policy-link" href="">Условия договора</a>
         </label>
       </div>
 
